@@ -1,0 +1,24 @@
+# Postgres configuration
+http://stackoverflow.com/questions/9987171/rails-3-2-fatal-peer-authentication-failed-for-user-pgerror
+
+# New project with Pg
+rails new my_application -d postgresql
+ruby -v
+rvm use 2.1.1@rails_4_0_4 --create
+
+# Add column to table
+add_column :users, :email, :string # on migration
+
+rails g migration add_fieldname_to_tablename fieldname:string # with generator
+rails g migration add_fieldname_to_tablename fieldname:string:index # with non-unique index
+rails g migration add_fieldname_to_tablename fieldname:string:uniq # with unique index
+
+# Remove column
+rails g migration remove_id_from_samples id:integer
+
+# Add reference
+rails g migration add_client_ref_to_samples client:belongs_to
+
+# Test coverage
+# Push first and then run the tests with CC token.
+# Does not seem to need to push coverage files.

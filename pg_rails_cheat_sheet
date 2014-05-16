@@ -1,0 +1,7 @@
+# Bullshit Postgres cheat shit.
+Pg uses peer auth for localhost.
+
+This means the user loged in the console must be the owner
+and user of rails.
+
+So, in database.yml, use cenouro.

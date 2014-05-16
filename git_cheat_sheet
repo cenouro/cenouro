@@ -1,0 +1,21 @@
+# Init
+git init
+
+# Create new branch (already switches to it).
+git checkout -b branch_name
+
+# List branches.
+git branch
+
+# Merge branche to master.
+git checkout master
+git merge branch_name
+
+# Delete branch.
+git branch -d branch_name
+
+# Delete even if it hasn't been merged (force delete).
+git branch -D branch_nam
+
+# Amend 
+git commit --amend [-m "Message"] # Uses same message as before

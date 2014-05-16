@@ -1,0 +1,1 @@
+java -jar SnpSift.jar extractFields 100-BRCA_S1.eff.vcf CHROM ID POS REF ALT "GEN[*].VF" FILTER QUAL DP "EFF[*].EFFECT"
