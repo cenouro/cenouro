@@ -4,6 +4,14 @@ git config --global user.email your.email@example.com
 git config --global push.default matching
 git config --global alias.co checkout
 
+# Alias for unstage
+git config --global alias.unstage 'reset HEAD --'
+
+# Add to ~/.gitconfig ([alias] not necessary if already exists)
+# git as [FILES|.] will run git add and then git status.
+[alias]
+  as = !sh -c 'git add -- "$@" && git status' --
+
 # Init
 git init
 
@@ -13,7 +21,7 @@ git checkout -b branch_name
 # List branches.
 git branch
 
-# Merge branche to master.
+# Merge branch to master.
 git checkout master
 git merge branch_name
 
@@ -21,7 +29,8 @@ git merge branch_name
 git branch -d branch_name
 
 # Delete even if it hasn't been merged (force delete).
-git branch -D branch_nam
+git branch -D branch_name
 
 # Amend 
 git commit --amend [-m "Message"] # Uses same message as before
+                                  # if not present.

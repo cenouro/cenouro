@@ -1,0 +1,6 @@
+# Run irb with gem loaded when developing.
+$ irb -Ilib -r<gem_name>
+
+# Gem creation tutorial. Also addresses how
+# to use rspec.
+https://github.com/radar/guides/blob/master/gem-development.md

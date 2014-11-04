@@ -12,7 +12,7 @@
 
 # Some applications read the EDITOR variable to determine your favourite text
 # editor. So uncomment the line below and enter the editor of your choice :-)
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 #export EDITOR=/usr/bin/mcedit
 
 # For some news readers it makes sense to specify the NEWSSERVER variable here
@@ -24,6 +24,10 @@ export EDITOR=/usr/bin/vim
 #
 #export PILOTPORT=/dev/pilot
 #export PILOTRATE=115200
+
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 test -s ~/.alias && . ~/.alias || true
 
@@ -60,6 +64,9 @@ bakpur='\e[45m'   # Purple
 bakcyn='\e[46m'   # Cyan
 bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
+
+stty ixany
+stty ixoff -ixon
 
 PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$bldylw\] [\W] $\[$bldblu\] "
 
