@@ -18,7 +18,7 @@ nmap <leader>f :CommandTFlush<CR>
 set nu
 
 " Use w!! to call sudo to save the file.
-cmap w!! w !sudo tee % >/dev/null
+cmap w!! w !sudo tee > /dev/null %
 
 set nobackup
 set noswapfile
