@@ -1,0 +1,2 @@
+# Enable HDMI
+mplayer -ao alsa:device=hdmi <file>
