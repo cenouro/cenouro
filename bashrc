@@ -68,7 +68,7 @@ txtrst='\e[0m'    # Text Reset
 stty ixany
 stty ixoff -ixon
 
-PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$bldylw\] [\W] $\[$bldblu\] "
+PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$bldylw\] [\W] \$\[$txtrst\] "
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
