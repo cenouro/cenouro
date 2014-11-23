@@ -1,0 +1,108 @@
+\documentclass{article}
+
+\usepackage[portuguese, brazilian]{babel}
+\usepackage{listings}
+
+\usepackage{fontspec}
+\usepackage{titlesec}
+\defaultfontfeatures{Ligatures=TeX}
+
+% Web fonts
+%\setsansfont{Georgia}
+%\setmainfont{Tahoma}
+%\titleformat*{\section}{\Large\bfseries\sffamily}
+%\titleformat*{\subsection}{\large\bfseries\sffamily}
+
+% Print fonts
+\setsansfont{Nimbus Sans L}
+\setromanfont{URW Palladio L}
+\titleformat*{\section}{\Large\bfseries\sffamily}
+\titleformat*{\subsection}{\large\bfseries\sffamily}
+
+\begin{document}
+
+\setmainfont{Nimbus Sans L}
+\title{Relatório do trabalho de Sistemas Iterativos Web}
+\author{Fernando G. C. de Almeida Salgueiro - 6878720\\ Guilherme Kayo Shida - 6878696\\ Luiz Bim}
+
+\maketitle
+
+\setmainfont{URW Palladio L}
+
+\section{Descrição das tecnologias utilizadas}
+\subsection{Twitter Bootstrap}
+Em 2011, o Bootstrap foi criado como uma solução interna para resolver inconsistências de desenvolvimento, pela equipe de engenharia do Twitter. O principal objetivo era padronizar as estruturas de desenvolvimento, visando incentivar a utilização de uma solução única, dentro da empresa, no que se refere ao front-end da aplicação. 
+
+Apesar de incentivar uma padronização, Bootstrap pode ser facilmente personalizado para cada aplicação uma vez que utiliza-se de poderosos preprocessadores (Less e Sass).
+
+Foram incluidas classes do Bootstrap na criação dos formulários, visando  a compabilidade em todos os browsers, adaptação do layout do site para diferentes resoluções de forma responsiva e padronização do estilo.
+
+\subsection{jQuery}
+jQuery é uma biblioteca para JavaScript de código aberto. A sintaxe do jQuery foi desenvolvida para tornar mais simples a navegação do documento HTML, a seleção de elementos DOM, criar animações, manipular eventos e desenvolver aplicações AJAX. A arquitetura da biblioteca facilita a criação de plugins.
+
+No projeto, utilizamos os plugins Bootstrap Datepicker, que permite a seleção de datas em formulários e Cookie JS, utilizado para persistir dados entre diferentes páginas web.
+
+jQuery também foi utilizado para validação de formulários e manipulação de eventos.
+
+\subsection{AJAX}
+AJAX (Asynchronous JavaScript and XML) é uma tecnologia utilizada para se comunicar com o servidor sem que haja necessidade da
+página ser carregada. Isso proporciona muita liberdade para o programador, uma vez que os dados comunicados podem ser inseridos de forma
+dinâmica na página sem que haja uma atualização ou redirecionamento, proporcionando uma experiência menos intrusiva ao usuário.
+
+No nosso trabalho, o AJAX desempenhou um papel muito importante, pois a descrição do trabalho não permitia a utilização de um servidor web.
+Infelizmente, tivemos que utilizar um servidor web uma vez que não foi possível realizar a persistência dos dados na parte do servidor apenas
+com JavaScript por motivos de segurança. Dado esse fato, acabamos utilizando um servidor web, porém de forma que nossa implementação ficasse mais
+próxima da descrição do trabalho. Isso foi atingido com a utilização de AJAX. 
+
+Nosso servidor é responsável por aceitar e tratar requisições AJAX, porém o código de tratamento foi implementado por nós, ao invés de utilizarmos a funcionalidade disponibilizada pelo servidor.
+
+\subsection{JSON}
+Json  (JavaScript Object Notation), a simplicidade de JSON tem resultado em seu uso difundido.  Uma das vantagens reivindicadas de JSON sobreXML como um formato para intercâmbio de dados neste contexto é o fato de ser muito mais fácil escrever um analisador JSON. Em JavaScript mesmo, JSON pode ser analisado trivialmente.
+
+Utilizamos JSON para realizar a comunicação e o armazenamento dos dados. Ao invés de realizar a persistência dos dados com um sistema de gerenciamento de banco de dados, nosso servidor recebe chamadas em AJAX e atualiza/disponibiliza o conteúdo de um arquivo. Nesse arquivo, nosso servidor é responsável por gravar os registros dos usuários e das receitas, em forma de objetos JSON.
+
+\subsection{PHP}
+PHP é uma linguagem interpretada livre, usada originalmente apenas para o desenvolvimento de aplicações atuantes no lado do servidor, capazes de gerar conteúdo dinâmico na World Wide Web. Figura entre as primeiras linguagens passíveis de inserção em documentos HTML, dispensando em muitos casos o uso de arquivos externos para eventuais processamentos de dados.
+
+O uso de PHP foi necessário para podermos atualizar o arquivo que armazena os registros em JSON. Como dito antes, tal arquivo não poderia ser atualizado apenas com o uso de JavaScript por motivos de segurança. A comunicação entre o browser do usuário e o back-end é realizada pelo tratamento de requisições POST  em AJAX, enviadas e tratadas por nosso servidor.
+
+\section{SEO}
+Search Engine Optimization (SEO) é um conjunto de técnicas, métodos e/ou estudos que visam melhorar o posicionamento de suas páginas no mecanismo de busca, ou seja, quando um usuário digita no mecanismo de busca uma palavra-chave, o objetivo do SEO é fazer com que uma (ou várias) das páginas do seu website apareça entre os primeiros resultados da busca orgânica.
+
+De acordo com \cite{kadavy}, SEO é uma ferramenta muito útil, porém que necessita de muita atenção. Não existe uma forma precisa para analisar palavras-chaves de forma a otimizar os resultados para um website que está disponível há pouco tempo. Fazendo o mau uso de palavras-chave pode inclusive fazer com que o motor de busca (na maioria dos casos, o Google) penalize o website pela má utilização das palavras-chaves.
+
+
+\cite{kadavy} recomenda não utilizar palavras-chaves por um período de tempo indeterminado. Após decorrido o tal tempo, existem pacotes e ferramentas (inclusive, algumas disponibilizadas pelo próprio Google) que permitem analisar estatisticamente palavras-chaves que estão gerando tráfego para o website. Somente então elas poderiam ser utilizadas sem o risco de haver penalização para o website. Por esse motivo, nosso grupo optou por não utilizar palavras-chaves no trabalho.
+
+Nas próximas subseções são descritas algumas tags que podem otimizar o posicionamento do website, de acordo com \cite{kadavy}.
+
+\subsection*{URL}
+Antes do motor de busca analisar o conteúdo em HTML do website, ele analisa a sua URL. Uma URL amigável que possibilita a interpretação humana leva a um melhor posicionamento; por exemplo, será mais eficiente utilizar  uma URL como ``receitas.com.br/receita-de-carne" em vez de ``receitas.com.br/?p=34".
+
+
+\subsection*{Tag \textit{title}}
+A tag de título da sua página é a informação mais forte sobre o conteúdo do seu website. Muitas empresas cometem o erro de nomear sua página inicial como ``Home Page". Para qualquer página de seu website, sua tag de título deve conter exatamente as palavras-chaves que geram maior tráfego ao site.
+
+\subsection*{Metatag de descrição}
+Descrição do conteúdo da página, geralmente curta (por volta de 200 caracteres), utilizada pelo motor de busca para mostrar ao usuário uma breve descrição da página e também para avaliá-la.
+
+\subsection*{Headers}
+Headers são organizados por ordem de importância: H1, H2, H3, H4, H5 e H6. É recomendado que a página contenha apenas um H1, preferencialmente utilizado para o título da página (pode ou não ser igual a tag title). Uma prática comum é utilizar o H1 para seus logos e links para a página inicial, dependendo do quão focado é o conteúdo do website. Caso o texto seja longo, é interessante dividi-lo, colocando alguns headers, que podem utilizar algumas palavras-chaves da sua página.
+
+\subsection*{Conteúdo}
+O motor de busca analisa também o conteúdo da página, porém essa análise é realizada de forma ponderada. Palavras em negrito ou itálico (tags \textit{i} e \textit{b}) tem um peso maior do que o conteúdo do restante do texto (normalmente escrito com a tag de parágrafo \textit{p}). Imagens também possuem uma relevância maior, por isso é importante utilizar de forma correta os atributos da tag \textit{anchor}.
+
+Assim sendo, não basta que o conteúdo seja relevante; o conteúdo deve estar bem estruturado e organizado.
+
+\begin{thebibliography}{9}
+
+\bibitem{kadavy}
+David Kadavy,
+      \emph{Design for Hackers}.
+      Wiley,
+      2011.
+
+      \end{thebibliography}
+
+\end{document}
+
