@@ -2,9 +2,12 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set nocompatible
+
 execute pathogen#infect()
 
 " Enable filetype plugins
+filetype on
 filetype plugin on
 filetype indent on
 
