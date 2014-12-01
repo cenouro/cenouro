@@ -1,0 +1,12 @@
+Motion
+
+lkjh - arrow keys
+wW - words
+eE - words ends
+bB - previous words
+
+Plugins
+
+vim-commentary
+gc - comments selection. accepts motion.
+gcc -- comments line

@@ -10,15 +10,13 @@ execute pathogen#infect()
 filetype on
 filetype plugin on
 filetype indent on
-
-" Remaps some upper case to lower case
-cmap W w
-cmap Q q
-nnoremap ; :
+syntax enable
+set autoindent
+set smartindent
 
 nmap <leader>f :CommandTFlush<CR>
 
-set nu
+set relativenumber
 
 " Use w!! to call sudo to save the file.
 cmap w!! w !sudo tee > /dev/null %
@@ -26,18 +24,35 @@ cmap w!! w !sudo tee > /dev/null %
 set nobackup
 set noswapfile
 
+" For long lines. Does not jump to next line when up/down are pressed.
+" Instead, jumps to the next 'subline'.
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
+" Disable arrow keys
+noremap <left> <nop>
+noremap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+set scrolloff=4
 
 " Turn on the WiLd menu
 set wildmenu
 
 " Ignore compiled files
-"set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc
 
 "Always show current position
 set ruler
@@ -72,9 +87,6 @@ set magic
 " Show matching brackets when text indicator is over them
 set showmatch
 
-" How many tenths of a second to blink when matching brackets
-"set mat=2
-
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
@@ -86,19 +98,12 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "set t_Co=256
-
-" Enable syntax highlighting
-syntax enable
-
 set background=dark
 colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
-" Use Unix as the standard file type
-"set ffs=unix,dos,mac
-"
 " Changes CommandT color.
 " For valid color schemes, use :hi in vim.
 let g:CommandTHighlightColor='Search'
@@ -113,30 +118,14 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
+" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
 set tw=500
-
-set ai "Auto indent
-set si "Smart indent
 set wrap "Wrap lines
-
-" For long lines. Does not jump to next line when up/down are pressed.
-" Instead, jumps to the next 'subline'.
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
-vnoremap <Down> gj
-vnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -151,18 +140,12 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
-
-" Close the current buffer
-"map <leader>bd :Bclose<cr>
-
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
 " Remember info about open buffers on close
 set viminfo^=%
 
