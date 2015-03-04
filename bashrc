@@ -74,4 +74,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 CHOST="x86_64-pc-linux-gnu"
 CFLAGS="-O2 -march=amdfam10 -mcx16 -mpopcnt -pipe"
-CXXFLAGS="${CFLAGS}"
+CXXFLAGS="-O2 -march=amdfam10 -mcx16 -mpopcnt -pipe"
