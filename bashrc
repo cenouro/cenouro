@@ -69,3 +69,4 @@ stty ixoff -ixon
 PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$bldylw\] [\W] \$\[$txtrst\] "
 
 
+PATH="/usr/local/heroku/bin:$PATH"
