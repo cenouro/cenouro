@@ -69,6 +69,3 @@ stty ixoff -ixon
 PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$bldylw\] [\W] \$\[$txtrst\] "
 
 
-CHOST="x86_64-pc-linux-gnu"
-CFLAGS="-O2 -march=amdfam10 -mcx16 -mpopcnt -pipe"
-CXXFLAGS="-O2 -march=amdfam10 -mcx16 -mpopcnt -pipe"
