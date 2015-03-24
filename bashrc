@@ -25,9 +25,7 @@ export EDITOR=/usr/local/bin/vim
 #export PILOTPORT=/dev/pilot
 #export PILOTRATE=115200
 
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 test -s ~/.alias && . ~/.alias || true
 
@@ -70,7 +68,6 @@ stty ixoff -ixon
 
 PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$bldylw\] [\W] \$\[$txtrst\] "
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 CHOST="x86_64-pc-linux-gnu"
 CFLAGS="-O2 -march=amdfam10 -mcx16 -mpopcnt -pipe"
