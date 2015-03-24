@@ -34,3 +34,11 @@ git branch -D branch_name
 # Amend 
 git commit --amend [-m "Message"] # Uses same message as before
                                   # if not present.
+
+# Choose sections of file to commit.
+git add -p <file> # e to edit hunk
+                  # s to split hunk
+
+# Git stash. Must add untracked files so git will add them to the index.
+# Unneeded for files already tracked.
+git stash

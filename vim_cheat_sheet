@@ -1,12 +1,14 @@
-Motion
-
+#Motion
 lkjh - arrow keys
 wW - words
 eE - words ends
 bB - previous words
 
-Plugins
+#Spell check
+]s [s - move to misspelled words
+z= - suggestions
 
+#Plug-ins
 vim-commentary
-gc - comments selection. accepts motion.
-gcc -- comments line
+gc - comments selection; accepts motion.
+gcc - comments line
