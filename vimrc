@@ -17,6 +17,7 @@ set smartindent
 nmap <leader>f :CommandTFlush<CR>
 
 set relativenumber
+set number
 
 " Use w!! to call sudo to save the file.
 cmap w!! w !sudo tee > /dev/null %
@@ -97,7 +98,7 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"set t_Co=256
+set t_Co=16
 set background=dark
 colorscheme solarized
 
