@@ -68,5 +68,8 @@ stty ixoff -ixon
 
 PS1="\[$bldgrn\]\u\[$bldpur\]@\h\[$bldylw\] [\W] \$\[$txtrst\] "
 
+eval `dircolors /usr/src/dircolors/dircolors-solarized/dircolors.256dark`
+alias grep='grep --color'
+alias ls='ls --color=auto'
 
 PATH="/usr/local/heroku/bin:$PATH"
