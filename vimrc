@@ -7,9 +7,7 @@ set nocompatible
 execute pathogen#infect()
 
 " Enable filetype plugins
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 syntax enable
 set autoindent
 set smartindent
@@ -32,21 +30,32 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+" Hotkeys for split resizing
+nnoremap - <c-w><
+nnoremap + <c-w>>
+
+" Split repositioning
+nnoremap <up> <c-w>K
+nnoremap <down> <c-w>J
+nnoremap <left> <c-w>H
+nnoremap <right> <c-w>L
+nnoremap <BS> <c-w>r
+nnoremap <c-BS> <c-w>R
+
 " Disable arrow keys
-noremap <left> <nop>
-noremap <right> <nop>
-noremap <up> <nop>
-noremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 
+" New commands (aka TODO: organize)
+nnoremap '= gg=G''
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Set 7 lines to the cursor - when moving vertically using j/k
+" Set lines to the cursor - when moving vertically using j/k
 set scrolloff=4
 
 " Turn on the WiLd menu
@@ -120,13 +129,17 @@ set expandtab
 set smarttab
 
 " 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
+" set shiftwidth=4
+" set tabstop=4
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+autocmd FileType python,c,cpp setlocal expandtab shiftwidth=4 softtabstop=4
+
+autocmd FileType cpp,c,ruby autocmd BufWritePre <buffer> :normal gg=G''
 
 " Linebreak on 500 characters
 set lbr
 set tw=500
-set wrap "Wrap lines
+set wrap " Wrap lines
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

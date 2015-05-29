@@ -1,7 +1,7 @@
 # Configuration
 git config --global user.name "Your Name"
 git config --global user.email your.email@example.com
-git config --global push.default matching
+git config --global push.default current
 git config --global alias.co checkout
 
 # Alias for unstage
