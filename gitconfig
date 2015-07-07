@@ -1,0 +1,9 @@
+[user]
+	name = Mario Maia
+	email = 101b147ch@gmail.com
+[alias]
+	co = checkout
+[push]
+	default = current
+[core]
+	editor = vim
