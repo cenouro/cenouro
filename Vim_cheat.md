@@ -1,24 +1,25 @@
 # Motion
-lkjh - arrow keys
-wW - words
-eE - words ends
-bB - previous words
+* `lkjh` - arrow keys
+* `wW` - words
+* `eE` - words ends
+* `bB` - previous words
 
 # Operations
-~ - toggle case
-Ctrl-D, Ctrl-T - same as << or >>, but in insert mode
-Ctrl-F - same as ==, but in imode
-. - repeat last change
-@: - repeat last command-line
+* `~` - toggle case
+* `Ctrl-D Ctrl-T` - same as `<< >>`, but in `insert mode`
+* `Ctrl-F` - same as `==`, but in `insert mode`
+* `.` - repeat last change
+* `@:` - repeat last command-line
 
 # Spell check
-]s [s - move to misspelled words
-z= - suggestions
+* `]s [s` - move to misspelled words
+* `z=` - suggestions
 
-# Plug-ins
-vim-commentary
-gc - comments selection; accepts motion.
-gcc - comments line
+# Plug-ins to check later
+* [vim-commentary](https://github.com/tpope/vim-commentary)
+* [syntastic](https://github.com/scrooloose/syntastic)
+* [vim-rails](https://github.com/tpope/vim-rails)
+* [gundo.vim](https://github.com/sjl/gundo.vim)
 
 # Help
-Ctrl-] - follow links
+* `Ctrl-]` - follow links
