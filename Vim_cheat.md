@@ -20,6 +20,8 @@
 * [syntastic](https://github.com/scrooloose/syntastic)
 * [vim-rails](https://github.com/tpope/vim-rails)
 * [gundo.vim](https://github.com/sjl/gundo.vim)
+* [ctrlp.vim](https://github.com/kien/ctrlp.vim) - alternative to CommandT
+* [vim-fugitive](https://github.com/tpope/vim-fugitive)
 
 # Help
 * `Ctrl-]` - follow links
