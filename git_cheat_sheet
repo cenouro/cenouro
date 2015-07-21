@@ -42,3 +42,6 @@ git add -p <file> # e to edit hunk
 # Git stash. Must add untracked files so git will add them to the index.
 # Unneeded for files already tracked.
 git stash
+
+# Branch iss21 set up to track remote branch iss21 from origin.
+git branch --set-upstream-to=origin/<branch> <branch>
