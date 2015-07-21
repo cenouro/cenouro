@@ -22,6 +22,7 @@
 * [gundo.vim](https://github.com/sjl/gundo.vim)
 * [ctrlp.vim](https://github.com/kien/ctrlp.vim) - alternative to CommandT
 * [vim-fugitive](https://github.com/tpope/vim-fugitive)
+* [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 
 # Help
 * `Ctrl-]` - follow links
