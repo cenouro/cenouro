@@ -2,11 +2,13 @@
 ## Profilers
 * `iozone`: benchmarks IO operations.
 * `bootchart`: boot time
+* `systemd-analyze`
 
 ## Things to remember
 * Configure `$XDG_CACHE_HOME` to be a ramdisk. Some programs use this variable to write their temp files.
-* Install `preload` and `readahead`.
-* `systemd-analyze`
+* Install `preload` and `readahead` (may incur boot overhead).
+* `squash` `/usr`. Overlay not worthiwhile.
+* Maybe also `squash` `.vim`.
 
 ## `systemctl` quick reference
 ```shell
