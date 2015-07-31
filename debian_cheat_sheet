@@ -1,0 +1,6 @@
+# Explanation: we are looking for broken reverse dependencies
+# of type “recommends” for installed packages.
+aptitude search '~RBrecommends:~i'
+
+# To install them:
+aptitude install '~RBrecommends:~i'+M

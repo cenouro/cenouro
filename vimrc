@@ -4,7 +4,7 @@
 
 set nocompatible
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 " Enable filetype plugins
 filetype plugin indent on
@@ -109,7 +109,7 @@ set tm=500
 
 set t_Co=16
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -131,7 +131,7 @@ set smarttab
 " 1 tab == 2 spaces
 " set shiftwidth=4
 " set tabstop=4
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+autocmd FileType ruby,eruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType python,c,cpp setlocal expandtab shiftwidth=4 softtabstop=4
 
 autocmd FileType cpp,c,ruby autocmd BufWritePre <buffer> :normal gg=G''
