@@ -15,6 +15,7 @@ they won't necessarily work for you.
 ### Coplien articles and related stuff
 
 Coplien has written two articles about TDD. Here are links to both, as well links to some replies.
+
 [Why most unit testing is a waste of time](http://www.rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf)
 * TODO: resume the article.
 
