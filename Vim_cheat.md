@@ -1,5 +1,12 @@
 # Motion
 * `lkjh` - arrow keys
+* HL - cursor top/bottom window
+* M - cursor middle of window
+* ^B^F - page up/down
+* ^Y^E - scroll up/down
+
+
+
 * `wW` - words
 * `eE` - words ends
 * `bB` - previous words
@@ -23,6 +30,21 @@
 * [ctrlp.vim](https://github.com/kien/ctrlp.vim) - alternative to CommandT
 * [vim-fugitive](https://github.com/tpope/vim-fugitive)
 * [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
+
+
+# Misc
+* `i` - in # diw => delete in word
+* `a` - all in word
+* `caw`
+* `yi)`
+* `di[`
+* `da[`
+* `va"`
+* `.` - repeats last command. last command ends when ESC is pressed
+* In visual: `,:normal macro`
+* `m letter` - make mark
+* `\`letter` - go to mark
+* `^A` - increment
 
 # Help
 * `Ctrl-]` - follow links

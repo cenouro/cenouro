@@ -132,7 +132,7 @@ set smarttab
 " set shiftwidth=4
 " set tabstop=4
 autocmd FileType ruby,eruby setlocal shiftwidth=2 tabstop=2
-autocmd FileType python,c,cpp setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType python,c,cpp,rst setlocal expandtab shiftwidth=4 softtabstop=4
 
 autocmd FileType cpp,c,ruby autocmd BufWritePre <buffer> :normal gg=G''
 
