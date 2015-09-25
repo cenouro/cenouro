@@ -65,8 +65,8 @@ the case and he also gives examples of good comments.
     * These can be generic. YMMV, but for example, they can be used to make explicit
     the reason why your algorithm work.
 
-    * Another interesting possibility is to write comments like "This code is ugly but
-    for performance reasons. Keep that in mind".
+    * Another interesting possibility is to write comments like **"This code is ugly but
+    for performance reasons. Keep that in mind"**.
 
 * Clarification.
     * Usually for clarifying what your code is checking by calling third party libs.
