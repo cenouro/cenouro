@@ -42,7 +42,7 @@ a bit of hardcore and going through great lengths in order to illustrate the con
 
 ## Clean Code[r]
 
-Read [the book](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?ie=UTF8&qid=1443206748&sr=8-1&keywords=clean+code) 
+Read [the book](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?ie=UTF8&qid=1443206748&sr=8-1&keywords=clean+code)
 by Uncle Bob. Another good one is his [Clean Coder](http://www.amazon.com/The-Clean-Coder-Professional-Programmers/dp/0137081073/ref=pd_sim_14_1?ie=UTF8&refRID=0AFQQ6DX9HRTZTH8FTP4&dpID=512NzCU0wfL&dpSrc=sims&preST=_AC_UL160_SR123%2C160_).
 
 ### Clean Code
@@ -93,7 +93,9 @@ gave him more experience. It is an interesting book and a fun reading.
 This section will probably be very small. It contains conventions that I find useful in
 most languages.
 
-* Abstract methods should raise `NotImplementedError`. This one is already followed by
-virtually everyone. But what people don't usually do is to put a custom message on the
-exception clarifying the return type/exception and so on. Of course this kinda
-defeats polymorphism, but in some cases it can be helpful.
+* Abstract methods should raise `NotImplementedError`.
+
+    * This one is already followed by virtually everyone. But what people don't
+    usually do is to put a custom message on the exception clarifying the return
+    type/exception and so on. Of course this kinda defeats polymorphism, but in
+    some cases it can be helpful.
