@@ -38,3 +38,44 @@ to be closely related to hardware. Still, I was able to find the following artic
 a bit of hardcore and going through great lengths in order to illustrate the concept, it is very useful.
 
 [Article about Monte Carlo in practice](http://www-cs-students.stanford.edu/~briank/BrianKorverMonteCarlo.pdf)
+
+## Clean Code[r]
+
+Read [the book](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?ie=UTF8&qid=1443206748&sr=8-1&keywords=clean+code) 
+by Uncle Bob. Another good one is his [Clean Coder](http://www.amazon.com/The-Clean-Coder-Professional-Programmers/dp/0137081073/ref=pd_sim_14_1?ie=UTF8&refRID=0AFQQ6DX9HRTZTH8FTP4&dpID=512NzCU0wfL&dpSrc=sims&preST=_AC_UL160_SR123%2C160_).
+
+### Clean Code
+
+This one deals mainly with coding conventions. It is written with examples in Java,
+and is a very profitable reading. For me, the most important part of the book is about
+comments. In that chapter, Uncle Bob mainly states that "comments usually mean that the
+programmer has failed to express his idea with code". Of course, this is not
+the case and he also gives examples of good comments.
+
+* Informative comments.
+    * These are usually to make explicit the intent of a some piece of code
+    that can't be expressed succintly in code. For example, patterns that a regex
+    should match.
+
+    * Regarding regex, you can use comments but I personally find them to be
+    very use to defend and express match patterns in terms of unit tests.
+
+* Explanation of intent.
+    * These can be generic. YMMV, but for example, they can be used to make explicit
+    the reason why your algorithm work.
+
+    * Another interesting possibility is to write comments like "This code is ugly but
+    for performance reasons. Keep that in mind".
+
+* Clarification.
+    * Usually for clarifying what your code is checking by calling third party libs.
+    For example, C `strcmp` has a non intuitive return value. Add to it a bunch of
+    calls in a long if chain and you are doomed.
+
+As a final resource, watch [this video](https://www.youtube.com/watch?v=HZJxjlvBbVA).
+TODO: verify that the video is good enough.
+
+### Clean Coder
+
+Here Uncle Bob deals mainly with TDD, ethical behavior for coders and some other things that
+gave him more experience. It is an interesting book and a fun reading.
