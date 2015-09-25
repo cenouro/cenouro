@@ -73,6 +73,13 @@ the case and he also gives examples of good comments.
     For example, C `strcmp` has a non intuitive return value. Add to it a bunch of
     calls in a long if chain and you are doomed.
 
+* TODO comments.
+
+Why comments suck? Because you can't run them and rarely will they be kept updated.
+Try to avoid them at all costs. In most cases, you can refactor the code, write
+descriptive tests and expectations and rename variables and functions to achieve
+better clarity.
+
 As a final resource, watch [this video](https://www.youtube.com/watch?v=HZJxjlvBbVA).
 TODO: verify that the video is good enough.
 
@@ -80,3 +87,13 @@ TODO: verify that the video is good enough.
 
 Here Uncle Bob deals mainly with TDD, ethical behavior for coders and some other things that
 gave him more experience. It is an interesting book and a fun reading.
+
+## Languages stuff
+
+This section will probably be very small. It contains conventions that I find useful in
+most languages.
+
+* Abstract methods should raise `NotImplementedError`. This one is already followed by
+virtually everyone. But what people don't usually do is to put a custom message on the
+exception clarifying the return type/exception and so on. Of course this kinda
+defeats polymorphism, but in some cases it can be helpful.
