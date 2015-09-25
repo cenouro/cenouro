@@ -42,6 +42,9 @@ Python test frameworks suck when compared to Ruby RSpec. Mock libs are even
 worse. This is not a major problem since we can use assertions in the code.
 By using assertions we are also taking advantage of Monte Carlo techniques.
 
+If you really need to mock some data, I really recommend that you use function
+pointers.
+
 #### Python duck typing sucks
 
 Yes, thats right. Your code will probably be full of `isinstance`'s. Hopefully
@@ -52,7 +55,7 @@ you will need them only on assertions. Deal with it.
 String formating using `format` is somewhat limited. But you can find
 documentation (good luck on that) about making it powerful. The idea is to
 implement the magic method `__format__`.
-* TODO: gist
+* TODO: gist and link
 
 #### Set is useless
 
