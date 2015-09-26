@@ -48,3 +48,4 @@
 
 # Help
 * `Ctrl-]` - follow links
+* `:Helptags` - Generates help tags. This is a Pathogen command. [ref](http://usevim.com/2012/12/21/vim-101-help-tags/)
