@@ -53,14 +53,15 @@ inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 
-" New commands (aka TODO: organize)
-nnoremap '= gg=G''
+" Indent full file, go back to line we were at and
+" then "center window on current line".
+nnoremap '= gg=G''zz
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Set lines to the cursor - when moving vertically using j/k
+" Set lines to the cursor - when moving vertically using j/k.
 set scrolloff=4
 
 " Turn on the Wild menu.
@@ -198,7 +199,7 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
 " Toggle spell checking.
 map <F7> :setlocal spell! spelllang=en_us<CR>
-map <F8> :setlocal spell! spelllang=pt<CR>
+map <F8> :setlocal spell! spelllang=pt_br<CR>
 
 " Customize some colors.
 hi SpellBad term=reverse cterm=reverse ctermfg=3 guifg=Black guibg=Yellow
