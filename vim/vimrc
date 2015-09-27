@@ -23,18 +23,20 @@ cmap w!! w !sudo tee > /dev/null %
 set nobackup
 set noswapfile
 
-" For long lines. Does not jump to next line when up/down are pressed.
-" Instead, jumps to the next 'subline'.
+" For long lines. Goes to next line (even if it is a wrapped
+" continuation of current line).
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-" Hotkeys for split resizing
+" Hotkeys for split resizing.
+" TODO: probably deprecate these.
 nnoremap - <c-w><
 nnoremap + <c-w>>
 
-" Split repositioning
+" Split repositioning.
+" TODO: use arrow for resizing instead.
 nnoremap <up> <c-w>K
 nnoremap <down> <c-w>J
 nnoremap <left> <c-w>H
@@ -42,7 +44,10 @@ nnoremap <right> <c-w>L
 nnoremap <BS> <c-w>r
 nnoremap <c-BS> <c-w>R
 
-" Disable arrow keys
+" Disable arrow keys.
+" TODO: also disable Delete and Backspace.
+" TODO: also disable Page keys.
+" TODO: also disable Home/End keys.
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
@@ -58,46 +63,46 @@ nnoremap '= gg=G''
 " Set lines to the cursor - when moving vertically using j/k
 set scrolloff=4
 
-" Turn on the WiLd menu
+" Turn on the Wild menu.
 set wildmenu
 
-" Ignore compiled files
+" Ignore compiled files.
 set wildignore=*.o,*~,*.pyc
 
-"Always show current position
+" Always show current position.
 set ruler
 
-" Height of the command bar
+" Height of the command bar.
 "set cmdheight=2
 
-" A buffer becomes hidden when it is abandoned
+" A buffer becomes hidden when it is abandoned.
 set hidden
 
-" Configure backspace so it acts as it should act
+" Configure backspace so it acts as it should act.
 set backspace=eol,start,indent
 
-" Ignore case when searching
+" Ignore case when searching.
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases .
 set smartcase
 
-" Highlight search results
+" Highlight search results.
 set hlsearch
 
-" Makes search act like search in modern browsers
+" Makes search act like search in modern browsers.
 set incsearch
 
-" Don't redraw while executing macros (good performance config)
+" Don't redraw while executing macros (good performance config).
 set lazyredraw
 
-" For regular expressions turn magic on
+" For regular expressions turn magic on.
 set magic
 
-" Show matching brackets when text indicator is over them
+" Show matching brackets when text indicator is over them.
 set showmatch
 
-" No annoying sound on errors
+" No annoying sound on errors.
 set noerrorbells
 set novisualbell
 set t_vb=
@@ -122,13 +127,13 @@ let g:CommandTHighlightColor='Search'
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Use spaces instead of tabs
+" Use spaces instead of tabs.
 set expandtab
 
-" Be smart when using tabs ;)
+" Be smart when using tabs ;).
 set smarttab
 
-" 1 tab == 2 spaces
+" TODO: set default tab values for non-specified extensions.
 " set shiftwidth=4
 " set tabstop=4
 autocmd FileType ruby,eruby setlocal shiftwidth=2 tabstop=2
@@ -137,6 +142,7 @@ autocmd FileType python,c,cpp,rst setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType cpp,c,ruby autocmd BufWritePre <buffer> :normal gg=G''
 
 " Linebreak on 500 characters
+" TODO: fix this.
 set lbr
 set tw=500
 set wrap " Wrap lines
@@ -145,8 +151,8 @@ set wrap " Wrap lines
 " => Visual mode related
 """"""""""""""""""""""""""""""
 
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
+" Visual mode pressing * or # searches for the current selection.
+" Super useful! From an idea by Michael Naumann.
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
@@ -154,23 +160,23 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Return to last edit position when opening files (You want this!)
+" Return to last edit position when opening files (You want this!).
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
 
-" Remember info about open buffers on close
+" Remember info about open buffers on close.
 set viminfo^=%
 
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
 
-" Always show the status line
+" Always show the status line.
 set laststatus=2
 
-" Format the status line
+" Format the status line.
 set statusline=%t%h%m%r%y%=%c,%l/%L\ %P
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
