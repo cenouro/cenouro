@@ -45,13 +45,40 @@ nnoremap <BS> <c-w>r
 nnoremap <c-BS> <c-w>R
 
 " Disable arrow keys.
-" TODO: also disable Delete and Backspace.
-" TODO: also disable Page keys.
-" TODO: also disable Home/End keys.
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
+
+" Disable even more keys so you can train ;).
+"
+" Normal mode: x
+" Insert mode: none. Use CTRL-O and a Normal mode deletion
+" command.
+inoremap <Delete> <nop>
+nnoremap <Delete> <nop>
+
+" Normal mode: X
+" Insert mode: CTRL-H
+inoremap <Backspace> <nop>
+nnoremap <Backspace> <nop>
+
+" No easy alternatives. But you can make it work by reading the
+" help documentation.
+inoremap <Pageup> <nop>
+nnoremap <Pageup> <nop>
+
+" Same as Pageup.
+inoremap <Pagedown> <nop>
+nnoremap <Pagedown> <nop>
+
+" Normal mode: 0
+inoremap <Home> <nop>
+nnoremap <Home> <nop>
+
+" Normal mode: $
+inoremap <End> <nop>
+nnoremap <End> <nop>
 
 " Indent full file, go back to line we were at and
 " then "center window on current line".
@@ -142,10 +169,9 @@ autocmd FileType python,c,cpp,rst setlocal expandtab shiftwidth=4 softtabstop=4
 
 autocmd FileType cpp,c,ruby autocmd BufWritePre <buffer> :normal gg=G''
 
-" Linebreak on 500 characters
 " TODO: fix this.
 set lbr
-set tw=500
+set textwidth=65
 set wrap " Wrap lines
 
 """"""""""""""""""""""""""""""
@@ -185,6 +211,7 @@ set statusline=%t%h%m%r%y%=%c,%l/%L\ %P
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
+" TODO: this may be useful for everything.
 func! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
