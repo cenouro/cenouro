@@ -1,0 +1,9 @@
+[submodule "themes/numix/numix-gtk-theme"]
+	path = themes/numix/numix-gtk-theme
+	url = https://github.com/cldx/numix-gtk-theme
+[submodule "themes/numix/numix-icon-theme"]
+	path = themes/numix/numix-icon-theme
+	url = https://github.com/numixproject/numix-icon-theme
+[submodule "themes/numix/numix-icon-theme-circle"]
+	path = themes/numix/numix-icon-theme-circle
+	url = https://github.com/numixproject/numix-icon-theme-circle
