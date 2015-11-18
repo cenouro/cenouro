@@ -45,3 +45,13 @@ git stash
 
 # Branch iss21 set up to track remote branch iss21 from origin.
 git branch --set-upstream-to=origin/<branch> <branch>
+
+# TODO: this is for Vim!!!
+% # shortcut for current file full path.
+:!git add %
+
+# TODO: test this.
+git co file # revert changes.
+
+# TODO: Vim!!!
+:bw # buffer wipeout.
