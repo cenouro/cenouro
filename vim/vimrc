@@ -1,8 +1,35 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 set nocompatible
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mouse
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable mouse so we can actually
+" disable it by remapping.
+" This may sound fucking weird, but it
+" is necessary since just disabling the mouse
+" will make wheel events to be mapped to arrow keys.
+set mouse=a
+
+" Remap mouse events.
+map <ScrollWheelUp> <Nop>
+map <ScrollWheelDown> <Nop>
+
+map <LeftMouse> <Nop>
+map <MiddleMouse> <Nop>
+map <RightMouse> <Nop>
+map <2-LeftMouse> <Nop>
+map <2-MiddleMouse> <Nop>
+map <2-RightMouse> <Nop>
+map <3-LeftMouse> <Nop>
+map <3-MiddleMouse> <Nop>
+map <3-RightMouse> <Nop>
+map <4-LeftMouse> <Nop>
+map <4-MiddleMouse> <Nop>
+map <4-RightMouse> <Nop>
 
 execute pathogen#infect()
 
@@ -141,15 +168,15 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set t_Co=256
-"set background=dark
-colorscheme molokai
+set background=dark
+colorscheme inkpot
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
 " Changes CommandT color.
 " For valid color schemes, use :hi in vim.
-let g:CommandTHighlightColor='Search'
+" let g:CommandTHighlightColor='Search'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -162,14 +189,17 @@ set expandtab
 set smarttab
 
 " TODO: set default tab values for non-specified extensions.
-" set shiftwidth=4
-" set tabstop=4
+set shiftwidth=4
+set tabstop=4
+
 autocmd FileType ruby,eruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType python,c,cpp,rst setlocal expandtab shiftwidth=4 softtabstop=4
 
 autocmd FileType cpp,c,ruby autocmd BufWritePre <buffer> :normal gg=G''
 
 " TODO: fix this.
+" Recommended range is 50~75. Convention is 80, but it is kinda
+" ugly.
 set lbr
 set textwidth=65
 set wrap " Wrap lines
@@ -189,9 +219,9 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 
 " Return to last edit position when opening files (You want this!).
 autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
+                        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                        \   exe "normal! g`\"" |
+                        \ endif
 
 " Remember info about open buffers on close.
 set viminfo^=%
@@ -213,9 +243,9 @@ set statusline=%t%h%m%r%y%=%c,%l/%L\ %P
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 " TODO: this may be useful for everything.
 func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
+        exe "normal mz"
+        %s/\s\+$//ge
+        exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
@@ -240,8 +270,8 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Returns true if paste mode is enabled
 function! HasPaste()
-  if &paste
-    return 'PASTE MODE  '
-  en
-  return ''
+        if &paste
+                return 'PASTE MODE  '
+        en
+        return ''
 endfunction
