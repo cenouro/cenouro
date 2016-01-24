@@ -4,6 +4,11 @@
 [alias]
 	co = checkout
 [push]
-	default = current
+	default = simple
 [core]
 	editor = vim
+	autocrlf = input
+[color]
+	ui = true
+[pull]
+	rebase = true
